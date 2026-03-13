@@ -4,6 +4,10 @@ A professional Node.js Express backend using MVC architecture for the GETFLY bac
 
 🔥 **[LIVE DEMO of API](https://getfly.onrender.com/list-api)**
 
+### Live API Testing
+🔗 **[Postman Collection](https://gold-robot-613895.postman.co/workspace/My-Workspace~c220b2ce-01de-47eb-838d-ed9d3c5ad082/collection/30659941-8719c1be-d8a6-41ae-8713-20e717f4ae6e?action=share&creator=30659941&active-environment=30659941-01da8349-b947-4892-9eb7-d90b641878d9)**
+
+
 ![Node.js](https://img.shields.io/badge/Node.js-20-green)
 ![Express](https://img.shields.io/badge/Express-4-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
