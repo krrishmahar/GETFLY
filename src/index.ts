@@ -11,7 +11,7 @@ const server = app.listen(port, () => {
   const y = "\x1b[33m";  // yellow
   const d = "\x1b[2m";   // dim
   const r = "\x1b[0m";   // reset
-  const base = `http://localhost:${port}`;
+  const base = process.env.RENDER_EXTERNAL_URL || `http://localhost:${port}`;
 
   console.log(`\n${b}${g}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${r}`);
   console.log(`${b}${g}  GETFLY PROJECT — Server Ready${r}`);
@@ -19,7 +19,8 @@ const server = app.listen(port, () => {
 
   console.log(`${b}  SYSTEM${r}`);
   console.log(`  ${d}Health check  ${r}  ${c}GET   ${r}${base}/health`);
-  console.log(`  ${d}About         ${r}  ${c}GET   ${r}${base}/about\n`);
+  console.log(`  ${d}About         ${r}  ${c}GET   ${r}${base}/about`);
+  console.log(`  ${d}List API      ${r}  ${c}GET   ${r}${base}/list-api\n`);
 
   console.log(`${b}  AUTHENTICATION${r}`);
   console.log(`  ${d}Register      ${r}  ${y}POST  ${r}${base}/api/auth/register`);

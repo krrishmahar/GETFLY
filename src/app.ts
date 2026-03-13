@@ -6,6 +6,7 @@ import { prisma } from './lib/prisma.js';
 import authRoutes from './routes/auth.routes.js';
 import projectRoutes from './routes/project.routes.js';
 import aboutRoutes from './routes/about.route.js';
+import listApiRoutes from './routes/listApi.routes.js';
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/about', aboutRoutes);
+app.use('/list-api', listApiRoutes);
 
 // Base route
 app.get('/', (req: Request, res: Response) => {
