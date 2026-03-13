@@ -10,6 +10,4 @@ if (!connectionString) {
   );
 }
 
-export const prisma: PrismaClient | null = connectionString
-  ? new PrismaClient({ adapter: new PrismaPg(new pg.Pool({ connectionString })) })
-  : null;
+export const prisma: PrismaClient = new PrismaClient({ adapter: new PrismaPg(new pg.Pool({ connectionString })) });
