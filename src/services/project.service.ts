@@ -126,8 +126,16 @@ export class ProjectService {
   }
 
   static async deleteProject(id: number) {
-    return prisma.project.delete({
-      where: { id },
+    return prisma.$transaction(async (tx) => {
+      // Delete associated reports first due to foreign key constraint
+      await tx.dailyReport.deleteMany({
+        where: { projectId: id },
+      });
+
+      // Then delete the project
+      return tx.project.delete({
+        where: { id },
+      });
     });
   }
 
